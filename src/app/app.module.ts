@@ -2,6 +2,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 
+import { environment } from '../environments/environment';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from "@angular/common/http";
+
 import { AppComponent } from './app.component';
 
 
@@ -10,7 +14,9 @@ import { AppComponent } from './app.component';
     AppComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

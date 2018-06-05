@@ -1,4 +1,17 @@
-<div class="search">
-  <input type="text" name="search" id="search" [(ngModel)]="searchText">
-  <input type="button" value="Search" (click)="searchBook(searchText)">
+<div id="app-root">
+  <div id="menu">
+    <nav id="nav-home">Search</nav>
+    <nav id="nav-collection">My Collection</nav>
+  </div>
+  
+  <div id="content">
+    <form class="search">
+      <input type="text" name="search" id="search-text" [(ngModel)]="searchText">
+      <input type="submit" value="Search" id="search-button" (click)="searchBook(searchText)">
+    </form>
+    <app-book-list [bookList]="searchResults"></app-book-list>
+    <div id="collection"  class="book-list">
+
+    </div>
+  </div>
 </div>

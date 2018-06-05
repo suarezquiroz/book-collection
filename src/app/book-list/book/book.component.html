@@ -1,0 +1,15 @@
+<article class="book">
+  <section class="book-cover">
+    <img class="book-cover-image" [src]="book.volumeInfo.imageLinks.thumbnail" [alt]="book.volumeInfo.title">
+  </section>
+  <section class="book-title">
+    {{book.volumeInfo.title}}
+  </section>
+  <section class="book-authors">
+    <span *ngFor="let author of book.volumeInfo.authors">{{author}}</span>
+  </section>
+  <section class="book-search-info">{{book.searchInfo ? book.searchInfo.textSnippet : ''}}</section>
+  <section class="book-controls">
+    <button type="button" class="book-control">Add to collection</button>
+  </section>
+</article>

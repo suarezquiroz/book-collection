@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { HttpClient, HttpParams } from "@angular/common/http";
 import { environment } from '../environments/environment';
+import { BookListComponent } from "./book-list/book-list.component";
 
 @Component({
   selector: 'app-root',
@@ -14,6 +15,7 @@ export class AppComponent {
   searchText = '';
   apiUrl = 'https://www.googleapis.com/books/v1/volumes'
   title = 'Book Collection';
+  searchResults = [];
 
   searchBook(searchText: string) {
     searchText = searchText.trim();
@@ -31,8 +33,16 @@ export class AppComponent {
 
     this.http.get('https://www.googleapis.com/books/v1/volumes', options)
       .subscribe(data => {
-        console.log("data ", data);
+        this.searchResults = data["items"];
+        console.log("items", data["items"]);
       })
 
   }
+
+  ngOnInit() {
+
+    this.searchBook('Asimov')
+
+  }
+
 }

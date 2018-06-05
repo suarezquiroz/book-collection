@@ -6,6 +6,7 @@
 export const environment = {
   production: false,
   google:{
-    apikey:'AIzaSyBJio_uI86LLwnHK0Q-6tDtd11vYDjCURQ'
+    apikey:'AIzaSyBJio_uI86LLwnHK0Q-6tDtd11vYDjCURQ',
+    userId:'100489416398846532531'
   }
 };

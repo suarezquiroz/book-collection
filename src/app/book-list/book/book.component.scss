@@ -1,0 +1,62 @@
+.book {
+    height: 480px;
+    width: 360px;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 12px -3px darkslategrey;
+    position: relative;
+}
+
+.book>* {
+    margin-bottom: 10px;
+}
+
+.book-cover{
+    height: 40%
+}
+
+.book-title {
+    font-weight: bold;
+    font-size: 1.5em;
+}
+.book-authors{
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.book-cover,
+.book-title,
+.book-authors,
+.book-search-info,
+ {
+    padding: 5px 10px;
+}
+
+.book-search-info{
+    font-size: .9em;
+}
+.book-cover>img {
+    display: block;
+    margin: 0 auto;
+}
+
+.book-controls {
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.book-control {
+    background-color: royalblue;
+    border: none;
+    color: white;
+    padding: 10px 12px;
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    outline: none;
+}
